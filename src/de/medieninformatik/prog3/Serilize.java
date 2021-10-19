@@ -13,13 +13,13 @@ public class Serilize<T> {
 
     }
 
-    public void write() {
+    public void write(String filename) {
         if (list instanceof Serializable) {
-            serialize(list, "testList");
+            serialize(list, filename);
         } else {
             ArrayList<T> arrayList = new ArrayList<T>();
             arrayList.addAll(list);
-            serialize(arrayList, "testArrayList");
+            serialize(arrayList, filename);
         }
     }
 

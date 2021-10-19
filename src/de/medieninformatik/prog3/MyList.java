@@ -8,6 +8,10 @@ public class MyList<T extends Serializable> implements List<T> {
 
     List<T> list;
 
+    public MyList(List<T> list) {
+        this.list = list;
+    }
+
     @Override
     public int size() {
         return list.size();
