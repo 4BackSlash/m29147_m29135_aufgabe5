@@ -5,6 +5,9 @@ import java.util.*;
 import java.util.function.UnaryOperator;
 
 public class MyList<T extends Serializable> implements List<T> {
+
+    List<T> list;
+
     @Override
     public int size() {
         return list.size();
@@ -144,7 +147,4 @@ public class MyList<T extends Serializable> implements List<T> {
     public Spliterator<T> spliterator() {
         return list.spliterator();
     }
-
-    List<T> list;
-
 }
